@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -24,6 +25,16 @@ header {
     text-align: center;
 }
 
+.header-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.app-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -33,10 +44,68 @@ header h1 {
 header p {
     font-size: 1.2rem;
     opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.app-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
 }
 
 main {
     padding: 3rem 0;
+}
+
+.quick-links {
+    margin-bottom: 3rem;
+}
+
+.quick-link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.quick-link {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.quick-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quick-link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.quick-link h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.quick-link p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .support-section {
@@ -129,7 +198,40 @@ footer p {
     opacity: 0.8;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Enhanced Mobile Responsiveness */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header {
+        padding: 2rem 0;
+    }
+    
     header h1 {
         font-size: 2rem;
     }
@@ -138,8 +240,26 @@ footer p {
         font-size: 1rem;
     }
     
+    .app-icon {
+        font-size: 3rem;
+    }
+    
+    main {
+        padding: 2rem 0;
+    }
+    
+    .quick-link-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .quick-link {
+        padding: 1.5rem;
+    }
+    
     .support-section {
         padding: 1.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .support-section h2 {
@@ -148,5 +268,14 @@ footer p {
     
     .app-info {
         grid-template-columns: 1fr;
+    }
+    
+    .app-badges {
+        gap: 0.3rem;
+    }
+    
+    .badge {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.8rem;
     }
 }
