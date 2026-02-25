@@ -162,7 +162,7 @@ To contribute to this support site:
 ## 📞 Support
 
 For technical issues with this support site, please contact:
-- Email: support@cherokeedictonary.app
+- Email: dishaharish@translationcommons.org
 
 ## 📄 License
 
