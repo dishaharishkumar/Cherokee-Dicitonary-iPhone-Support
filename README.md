@@ -102,15 +102,6 @@ Optimized for modern browsers:
 - Edge
 - Mobile browsers
 
-## 📋 Setup Instructions
-
-1. Clone or download the repository
-2. Open `index.html` in a web browser
-3. For development, use a local server:
-   ```bash
-   python3 -m http.server 8000
-   ```
-4. Visit `http://localhost:8000` to view the site
 
 ## 🚀 Deployment Options
 
