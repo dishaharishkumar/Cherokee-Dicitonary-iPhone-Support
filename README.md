@@ -96,7 +96,7 @@ Key mobile features:
 ## 🌐 Browser Support
 
 Optimized for modern browsers:
-- Safari (iOS and macOS)
+- Safari (iOS)
 - Chrome (all platforms)
 - Firefox
 - Edge
